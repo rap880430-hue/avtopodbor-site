@@ -1249,4 +1249,1027 @@
         }
 
         .scroll-top:hover {
-            background: var(--
+            background: var(--accent-hover);
+            transform: translateY(-4px);
+        }
+
+        /* ===== COOKIE ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border-color);
+            padding: 20px 24px;
+            display: none;
+        }
+
+        .cookie-banner.visible {
+            display: block;
+        }
+
+        .cookie-banner-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-banner p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .cookie-banner p a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .cookie-banner .cookie-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-banner .btn-primary {
+            padding: 10px 28px;
+            font-size: 0.85rem;
+            min-height: 44px;
+        }
+
+        .cookie-banner .btn-outline {
+            padding: 10px 28px;
+            font-size: 0.85rem;
+            min-height: 44px;
+        }
+
+        /* ===== ПОДВАЛ ===== */
+        .footer {
+            border-top: 1px solid var(--border-color);
+            padding: 32px 0;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .footer a:hover {
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 992px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-wrapper {
+                padding: 28px;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            .numbers-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .app-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .app-content p {
+                max-width: 100%;
+            }
+            .app-features {
+                grid-template-columns: 1fr;
+            }
+            .app-buttons {
+                justify-content: center;
+            }
+            .app-section {
+                padding: 40px 24px;
+            }
+            .app-phone .phone-mockup {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 64px;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                padding: 80px 32px 40px;
+                gap: 18px;
+                transition: var(--transition);
+                border-left: 1px solid var(--border-color);
+                overflow-y: auto;
+            }
+            .nav.open {
+                right: 0;
+            }
+            .nav a {
+                font-size: 1.05rem;
+                width: 100%;
+                padding: 8px 0;
+            }
+            .nav .nav-phone {
+                font-size: 1.1rem !important;
+                margin-top: 8px;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .hero {
+                min-height: auto;
+                padding: 100px 0 60px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+            .hero-stats-item .number {
+                font-size: 1.4rem;
+            }
+            .section {
+                padding: 56px 0;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cars-grid {
+                grid-template-columns: 1fr;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .numbers-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .form-wrapper {
+                padding: 20px;
+            }
+            .cookie-banner-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+            }
+            .cookie-banner .cookie-actions {
+                justify-content: flex-end;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .app-section {
+                padding: 30px 16px;
+            }
+            .app-content h2 {
+                font-size: 1.8rem;
+            }
+            .app-features {
+                grid-template-columns: 1fr;
+            }
+            .app-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .app-buttons .btn-app {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-actions .btn-primary {
+                width: 100%;
+                justify-content: center;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .numbers-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-checkbox {
+                align-items: flex-start;
+            }
+            .contacts-actions {
+                flex-direction: column;
+            }
+            .contacts-actions .btn-primary,
+            .contacts-actions .btn-outline {
+                width: 100%;
+            }
+            .app-phone .phone-mockup {
+                max-width: 160px;
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-up.delay-1 {
+            transition-delay: 0.1s;
+        }
+        .fade-up.delay-2 {
+            transition-delay: 0.2s;
+        }
+        .fade-up.delay-3 {
+            transition-delay: 0.3s;
+        }
+        .fade-up.delay-4 {
+            transition-delay: 0.4s;
+        }
+        .fade-up.delay-5 {
+            transition-delay: 0.5s;
+        }
+        .fade-up.delay-6 {
+            transition-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== ШАПКА ===== -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">АВТО<span>ПОДБОР</span></a>
+
+            <nav class="nav" id="nav" role="navigation">
+                <a href="#services">Услуги</a>
+                <a href="#how">Как работаем</a>
+                <a href="#cars">Автомобили</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+                <a href="tel:+79123456789" class="nav-phone">+7 912 345 67 89</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1600&q=80" alt="Автомобиль" loading="lazy" />
+        </div>
+        <div class="container hero-content">
+            <span class="hero-badge">★ Профессиональный автоподбор в России</span>
+            <h1>
+                Найдём автомобиль,<br />
+                <span class="highlight">который стоит своих денег</span>
+            </h1>
+            <p>
+                Профессиональный подбор, полная проверка и юридическое сопровождение.
+                Поможем выбрать идеальный автомобиль в любом регионе России.
+            </p>
+            <div class="hero-actions">
+                <a href="#form" class="btn-primary">Оставить заявку</a>
+                <a href="#services" class="btn-outline">Узнать услуги</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stats-item">
+                    <span class="number">500+</span>
+                    <span class="label">Подобранных авто</span>
+                </div>
+                <div class="hero-stats-item">
+                    <span class="number">98%</span>
+                    <span class="label">Довольных клиентов</span>
+                </div>
+                <div class="hero-stats-item">
+                    <span class="number">7 лет</span>
+                    <span class="label">Опыта на рынке</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== УСЛУГИ ===== -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Наши услуги</span>
+                <h2>Что мы <span class="highlight">предлагаем</span></h2>
+                <p>Полный спектр услуг по подбору и проверке автомобилей.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-up delay-1">
+                    <div class="service-icon">🔍</div>
+                    <h3>Подбор автомобиля под ключ</h3>
+                    <p>Найдём идеальный автомобиль по вашим критериям на рынке России.</p>
+                    <span class="service-price">от 15 000 ₽</span>
+                </div>
+                <div class="service-card fade-up delay-2">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Проверка перед покупкой</h3>
+                    <p>Полная диагностика, проверка истории, тест-драйв и оценка состояния.</p>
+                    <span class="service-price">от 7 000 ₽</span>
+                </div>
+                <div class="service-card fade-up delay-3">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Диагностика</h3>
+                    <p>Профессиональная компьютерная и техническая диагностика автомобиля.</p>
+                    <span class="service-price">от 4 500 ₽</span>
+                </div>
+                <div class="service-card fade-up delay-4">
+                    <div class="service-icon">📜</div>
+                    <h3>Проверка истории</h3>
+                    <p>Проверка по базам данных, история пробега, ДТП, сервисные записи.</p>
+                    <span class="service-price">от 2 500 ₽</span>
+                </div>
+                <div class="service-card fade-up delay-5">
+                    <div class="service-icon">🚗</div>
+                    <h3>Выездная проверка</h3>
+                    <p>Выезд специалиста к автомобилю для осмотра и диагностики на месте.</p>
+                    <span class="service-price">от 5 000 ₽</span>
+                </div>
+                <div class="service-card fade-up delay-6">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Юридическая проверка</h3>
+                    <p>Проверка юридической чистоты, документов, отсутствия обременений.</p>
+                    <span class="service-price">от 4 500 ₽</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== КАК МЫ РАБОТАЕМ ===== -->
+    <section class="section" id="how" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Процесс</span>
+                <h2>Как мы <span class="highlight">работаем</span></h2>
+                <p>Прозрачный и понятный процесс от заявки до покупки.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-item fade-up delay-1">
+                    <div class="step-number">1</div>
+                    <h4>Заявка</h4>
+                    <p>Оставляете заявку на сайте или по телефону</p>
+                </div>
+                <div class="step-item fade-up delay-2">
+                    <div class="step-number">2</div>
+                    <h4>Обсуждение</h4>
+                    <p>Уточняем требования, бюджет и пожелания</p>
+                </div>
+                <div class="step-item fade-up delay-3">
+                    <div class="step-number">3</div>
+                    <h4>Поиск авто</h4>
+                    <p>Находим лучшие варианты на рынке России</p>
+                </div>
+                <div class="step-item fade-up delay-4">
+                    <div class="step-number">4</div>
+                    <h4>Проверка</h4>
+                    <p>Полная диагностика, проверка истории и юридическая чистота</p>
+                </div>
+                <div class="step-item fade-up delay-5">
+                    <div class="step-number">5</div>
+                    <h4>Покупка</h4>
+                    <p>Сопровождаем до сделки и передачи автомобиля</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ЦИФРЫ ===== -->
+    <section class="section" id="numbers">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Мы в цифрах</span>
+                <h2>Наши <span class="highlight">достижения</span></h2>
+            </div>
+            <div class="numbers-grid">
+                <div class="number-item fade-up delay-1">
+                    <div class="big-number">500+</div>
+                    <div class="number-label">Проверенных авто</div>
+                </div>
+                <div class="number-item fade-up delay-2">
+                    <div class="big-number">98%</div>
+                    <div class="number-label">Довольных клиентов</div>
+                </div>
+                <div class="number-item fade-up delay-3">
+                    <div class="big-number">7 лет</div>
+                    <div class="number-label">Опыта на рынке</div>
+                </div>
+                <div class="number-item fade-up delay-4">
+                    <div class="big-number">4.9</div>
+                    <div class="number-label">Средняя оценка</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== АВТОМОБИЛИ (РЕАЛИСТИЧНЫЕ ЦЕНЫ) ===== -->
+    <section class="section" id="cars" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Автопарк</span>
+                <h2>Наши <span class="highlight">предложения</span></h2>
+                <p>Актуальные автомобили с полной проверкой на рынке России.</p>
+            </div>
+
+            <div class="cars-grid">
+                <!-- Lada Vesta -->
+                <div class="car-card fade-up delay-1">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=80" alt="Lada Vesta" loading="lazy" />
+                        <span class="car-badge hit">🔥 ХИТ</span>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-title">Lada Vesta SW</div>
+                        <div class="car-year">2023 · 15 000 км</div>
+                        <div class="car-specs">
+                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.6 л, 106 л.с.</span></div>
+                            <div class="spec"><span class="label">Коробка</span><span class="value">Механика</span></div>
+                        </div>
+                        <div class="car-price">1 890 000 ₽</div>
+                    </div>
+                </div>
+
+                <!-- Hyundai Solaris -->
+                <div class="car-card fade-up delay-2">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80" alt="Hyundai Solaris" loading="lazy" />
+                        <span class="car-badge new">НОВОЕ</span>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-title">Hyundai Solaris</div>
+                        <div class="car-year">2022 · 28 000 км</div>
+                        <div class="car-specs">
+                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.6 л, 123 л.с.</span></div>
+                            <div class="spec"><span class="label">Коробка</span><span class="value">Автомат</span></div>
+                        </div>
+                        <div class="car-price">2 100 000 ₽</div>
+                    </div>
+                </div>
+
+                <!-- Toyota Camry -->
+                <div class="car-card fade-up delay-3">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=600&q=80" alt="Toyota Camry" loading="lazy" />
+                        <span class="car-badge">ПРЕМИУМ</span>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-title">Toyota Camry</div>
+                        <div class="car-year">2021 · 35 000 км</div>
+                        <div class="car-specs">
+                            <div class="spec"><span class="label">Двигатель</span><span class="value">2.5 л, 199 л.с.</span></div>
+                            <div class="spec"><span class="label">Коробка</span><span class="value">Автомат</span></div>
+                        </div>
+                        <div class="car-price">3 650 000 ₽</div>
+                    </div>
+                </div>
+
+                <!-- Kia Rio -->
+                <div class="car-card fade-up delay-4">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=600&q=80" alt="Kia Rio" loading="lazy" />
+                    </div>
+                    <div class="car-info">
+                        <div class="car-title">Kia Rio X</div>
+                        <div class="car-year">2022 · 22 000 км</div>
+                        <div class="car-specs">
+                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.4 л, 100 л.с.</span></div>
+                            <div class="spec"><span class="label">Коробка</span><span class="value">Механика</span></div>
+                        </div>
+                        <div class="car-price">2 000 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРИЛОЖЕНИЕ MAX (НОВОЕ) ===== -->
+    <section class="section" id="app">
+        <div class="container">
+            <div class="app-section">
+                <div class="app-grid">
+                    <div class="app-content">
+                        <div class="app-badge">📱 СКАЧАЙТЕ ПРИЛОЖЕНИЕ</div>
+                        <h2>Управляйте автоподбором <span class="highlight">с телефона</span></h2>
+                        <p>
+                            Приложение MAX — это полный контроль над подбором автомобиля.
+                            Отслеживайте статус заявки, получайте уведомления и общайтесь
+                            с экспертами в любое время.
+                        </p>
+                        <div class="app-features">
+                            <div class="app-feature">
+                                <span class="check">✓</span> Онлайн-чаты с экспертами
+                            </div>
+                            <div class="app-feature">
+                                <span class="check">✓</span> Уведомления о новых авто
+                            </div>
+                            <div class="app-feature">
+                                <span class="check">✓</span> История проверок в один клик
+                            </div>
+                            <div class="app-feature">
+                                <span class="check">✓</span> Личный кабинет с заявками
+                            </div>
+                        </div>
+                        <div class="app-buttons">
+                            <a href="#" class="btn-app">
+                                <span class="app-icon">📱</span>
+                                <span class="app-text">
+                                    <small>Скачать в</small>
+                                    <span>App Store</span>
+                                </span>
+                            </a>
+                            <a href="#" class="btn-app">
+                                <span class="app-icon">📱</span>
+                                <span class="app-text">
+                                    <small>Доступно в</small>
+                                    <span>Google Play</span>
+                                </span>
+                            </a>
+                            <a href="#" class="btn-app">
+                                <span class="app-icon">📱</span>
+                                <span class="app-text">
+                                    <small>Скачать</span>
+                                    <span>APK</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="app-phone">
+                        <div class="phone-mockup">
+                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80" alt="Приложение MAX" loading="lazy" />
+                        </div>
+                        <span class="phone-badge">⭐ 4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ОТЗЫВЫ ===== -->
+    <section class="section" id="reviews">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Отзывы</span>
+                <h2>Что говорят <span class="highlight">клиенты</span></h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card fade-up delay-1">
+                    <div class="review-stars">★★★★★</div>
+                    <blockquote>«Отличный сервис! Подобрали Lada Vesta за 3 дня. Полная диагностика, всё честно. Рекомендую!»</blockquote>
+                    <div class="review-author">
+                        <div class="review-avatar">А</div>
+                        <div>
+                            <div class="name">Алексей</div>
+                            <div class="detail">Москва, Россия</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-up delay-2">
+                    <div class="review-stars">★★★★★</div>
+                    <blockquote>«Помогли с покупкой Toyota Camry. Проверили по всем параметрам, сэкономили время и нервы.»</blockquote>
+                    <div class="review-author">
+                        <div class="review-avatar">М</div>
+                        <div>
+                            <div class="name">Мария</div>
+                            <div class="detail">Санкт-Петербург, Россия</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-up delay-3">
+                    <div class="review-stars">★★★★★</div>
+                    <blockquote>«Профессиональный подход. Подобрали Kia Rio в идеальном состоянии. Все документы в порядке.»</blockquote>
+                    <div class="review-author">
+                        <div class="review-avatar">Д</div>
+                        <div>
+                            <div class="name">Дмитрий</div>
+                            <div class="detail">Казань, Россия</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Вопросы</span>
+                <h2>Часто задаваемые <span class="highlight">вопросы</span></h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item open" onclick="this.classList.toggle('open')">
+                    <div class="faq-question">
+                        <span>Сколько времени занимает подбор автомобиля?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        В среднем подбор занимает от 3 до 7 дней. Всё зависит от ваших требований и сложности поиска.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-question">
+                        <span>В каких регионах вы работаете?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Мы работаем по всей России. Можем организовать доставку автомобиля в любой регион.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-question">
+                        <span>Что входит в проверку автомобиля?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Полная диагностика: двигатель, ходовая, электроника, проверка истории по базам ГИБДД, пробег, ДТП, юридическая чистота.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')">
+                    <div class="faq-question">
+                        <span>Сколько стоит проверка автомобиля?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Стоимость зависит от типа проверки. Базовый осмотр — от 4 500 ₽, полная проверка с выездом — от 7 000 ₽.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== КОНТАКТЫ ===== -->
+    <section class="section" id="contacts">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Связь</span>
+                <h2>Наши <span class="highlight">контакты</span></h2>
+            </div>
+
+            <div class="contacts-grid">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div class="info">
+                            <span class="label">Телефон</span>
+                            <span class="value"><a href="tel:+79123456789">+7 912 345 67 89</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">💬</div>
+                        <div class="info">
+                            <span class="label">WhatsApp</span>
+                            <span class="value"><a href="https://wa.me/79123456789" target="_blank">+7 912 345 67 89</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">✈️</div>
+                        <div class="info">
+                            <span class="label">Telegram</span>
+                            <span class="value"><a href="https://t.me/avtopodbor" target="_blank">@avtopodbor</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">✉️</div>
+                        <div class="info">
+                            <span class="label">Email</span>
+                            <span class="value"><a href="mailto:info@avtopodbor.ru">info@avtopodbor.ru</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div class="info">
+                            <span class="label">Город</span>
+                            <span class="value">Москва, Россия</span>
+                        </div>
+                    </div>
+
+                    <div class="contacts-actions">
+                        <a href="tel:+79123456789" class="btn-primary">📞 Позвонить</a>
+                        <a href="https://wa.me/79123456789" target="_blank" class="btn-outline">💬 WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="form-wrapper" id="form">
+                    <h3>Оставить заявку</h3>
+                    <p class="form-sub">Заполните форму, и мы свяжемся с вами.</p>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="formName">Имя *</label>
+                            <input type="text" id="formName" placeholder="Ваше имя" required />
+                            <div class="form-error" id="nameError">Пожалуйста, укажите ваше имя.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formPhone">Телефон *</label>
+                            <input type="tel" id="formPhone" placeholder="+7 912 345 67 89" required />
+                            <div class="form-error" id="phoneError">Пожалуйста, укажите номер телефона.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formCar">Какой автомобиль ищете?</label>
+                            <input type="text" id="formCar" placeholder="Марка, модель, год" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formBudget">Бюджет (₽)</label>
+                            <input type="text" id="formBudget" placeholder="Например: 2 000 000" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formMessage">Дополнительная информация</label>
+                            <textarea id="formMessage" placeholder="Ваши пожелания..." rows="3"></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="formConsent" />
+                            <label for="formConsent">
+                                Я согласен(на) на обработку моих персональных данных для обработки заявки и ознакомился(ась) с
+                                <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.
+                            </label>
+                        </div>
+                        <div class="form-error" id="consentError">Необходимо дать согласие на обработку данных.</div>
+
+                        <button type="submit" class="btn-primary" style="width:100%;">Отправить заявку</button>
+
+                        <div class="form-success" id="formSuccess">
+                            ✅ Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПОДВАЛ ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 АВТОПОДБОР. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="privacy.html" target="_blank">Политика конфиденциальности</a>
+                <a href="#app">Приложение MAX</a>
+                <a href="#form">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== COOKIE ===== -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-inner">
+            <p>
+                Мы используем cookies для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с
+                <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.
+            </p>
+            <div class="cookie-actions">
+                <button class="btn-outline" id="cookieDecline" style="padding:10px 24px;font-size:0.85rem;min-height:44px;">Отклонить</button>
+                <button class="btn-primary" id="cookieAccept" style="padding:10px 28px;font-size:0.85rem;min-height:44px;">Принять</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== КНОПКА НАВЕРХ ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ===== КНОПКА НАВЕРХ =====
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== ШАПКА =====
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 30) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ===== МОБИЛЬНОЕ МЕНЮ =====
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+
+        toggle.addEventListener('click', function() {
+            const isOpen = nav.classList.toggle('open');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('open');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ===== АНИМАЦИИ =====
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // ===== COOKIE =====
+        const banner = document.getElementById('cookieBanner');
+        const acceptBtn = document.getElementById('cookieAccept');
+        const declineBtn = document.getElementById('cookieDecline');
+
+        if (localStorage.getItem('cookieConsent') === null) {
+            banner.classList.add('visible');
+        }
+
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.classList.remove('visible');
+        });
+
+        declineBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'declined');
+            banner.classList.remove('visible');
+        });
+
+        // ===== ФОРМА =====
+        const form = document.getElementById('contactForm');
+        const consent = document.getElementById('formConsent');
+        const nameInput = document.getElementById('formName');
+        const phoneInput = document.getElementById('formPhone');
+        const nameError = document.getElementById('nameError');
+        const phoneError = document.getElementById('phoneError');
+        const consentError = document.getElementById('consentError');
+        const success = document.getElementById('formSuccess');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            let valid = true;
+
+            if (!nameInput.value.trim()) {
+                nameError.classList.add('visible');
+                valid = false;
+            } else {
+                nameError.classList.remove('visible');
+            }
+
+            if (!phoneInput.value.trim()) {
+                phoneError.classList.add('visible');
+                valid = false;
+            } else {
+                phoneError.classList.remove('visible');
+            }
+
+            if (!consent.checked) {
+                consentError.classList.add('visible');
+                valid = false;
+            } else {
+                consentError.classList.remove('visible');
+            }
+
+            if (!valid) return;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Отправка...';
+
+            const formData = {
+                name: nameInput.value.trim(),
+                phone: phoneInput.value.trim(),
+                car: document.getElementById('formCar').value.trim(),
+                budget: document.getElementById('formBudget').value.trim(),
+                message: document.getElementById('formMessage').value.trim(),
+                consent: consent.checked
+            };
+
+            // ===== НАСТРОЙТЕ ОТПРАВКУ ЗАЯВОК =====
+            // Раскомментируйте нужный вариант:
+            /*
+            // Telegram
+            const BOT_TOKEN = 'ВАШ_ТОКЕН';
+            const CHAT_ID = 'ВАШ_CHAT_ID';
+            const text = `🔔 НОВАЯ ЗАЯВКА\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n🚗 Авто: ${formData.car || 'Не указан'}\n💰 Бюджет: ${formData.budget || 'Не указан'}\n📝 Сообщение: ${formData.message || 'Нет'}`;
+            await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: CHAT_ID, text })
+            });
+            */
+
+            // Демо-режим
+            success.classList.add('visible');
+            submitBtn.textContent = '✓ Отправлено';
+            form.reset();
+
+            setTimeout(() => {
+                success.classList.remove('visible');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Отправить заявку';
+            }, 5000);
+
+            console.log('Заявка (демо):', formData);
+        });
+
+        nameInput.addEventListener('input', () => nameError.classList.remove('visible'));
+        phoneInput.addEventListener('input', () => phoneError.classList.remove('visible'));
+        consent.addEventListener('change', () => consentError.classList.remove('visible'));
+
+        // ===== FAQ =====
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
