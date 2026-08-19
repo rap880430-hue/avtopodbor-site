@@ -657,6 +657,7 @@
             font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
+            z-index: 2;
         }
 
         .car-image .car-badge.hit {
@@ -787,7 +788,7 @@
             color: var(--text-muted);
         }
 
-        /* ===== НОВОЕ: ПРИЛОЖЕНИЕ MAX ===== */
+        /* ===== ПРИЛОЖЕНИЕ MAX ===== */
         .app-section {
             background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
             border: 1px solid var(--border-color);
@@ -1707,8 +1708,46 @@
         </div>
     </section>
 
+    <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+    <section class="section" id="why">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Преимущества</span>
+                <h2>Почему <span class="highlight">выбирают нас</span></h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item fade-up delay-1">
+                    <span class="benefit-icon">⏱️</span>
+                    <h4>Экономия времени</h4>
+                    <p>Мы берём на себя весь поиск и проверку</p>
+                </div>
+                <div class="benefit-item fade-up delay-2">
+                    <span class="benefit-icon">🔍</span>
+                    <h4>Проверка перед покупкой</h4>
+                    <p>Диагностика и проверка истории каждого авто</p>
+                </div>
+                <div class="benefit-item fade-up delay-3">
+                    <span class="benefit-icon">👨‍🔧</span>
+                    <h4>Опыт специалистов</h4>
+                    <p>Более 7 лет в автоподборе и диагностике</p>
+                </div>
+                <div class="benefit-item fade-up delay-4">
+                    <span class="benefit-icon">🌍</span>
+                    <h4>Работа по всей России</h4>
+                    <p>Подбираем автомобили в любом регионе РФ</p>
+                </div>
+                <div class="benefit-item fade-up delay-5">
+                    <span class="benefit-icon">🤝</span>
+                    <h4>Помощь на всех этапах</h4>
+                    <p>Сопровождаем от выбора до регистрации</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== ЦИФРЫ ===== -->
-    <section class="section" id="numbers">
+    <section class="section" id="numbers" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header center">
                 <span class="subtitle">Мы в цифрах</span>
@@ -1735,8 +1774,8 @@
         </div>
     </section>
 
-    <!-- ===== АВТОМОБИЛИ (РЕАЛИСТИЧНЫЕ ЦЕНЫ) ===== -->
-    <section class="section" id="cars" style="background: var(--bg-secondary);">
+    <!-- ===== АВТОМОБИЛИ ===== -->
+    <section class="section" id="cars">
         <div class="container">
             <div class="section-header center">
                 <span class="subtitle">Автопарк</span>
@@ -1815,8 +1854,8 @@
         </div>
     </section>
 
-    <!-- ===== ПРИЛОЖЕНИЕ MAX (НОВОЕ) ===== -->
-    <section class="section" id="app">
+    <!-- ===== ПРИЛОЖЕНИЕ MAX ===== -->
+    <section class="section" id="app" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="app-section">
                 <div class="app-grid">
@@ -1860,7 +1899,7 @@
                             <a href="#" class="btn-app">
                                 <span class="app-icon">📱</span>
                                 <span class="app-text">
-                                    <small>Скачать</span>
+                                    <small>Скачать</small>
                                     <span>APK</span>
                                 </span>
                             </a>
@@ -1932,7 +1971,7 @@
             </div>
 
             <div class="faq-grid">
-                <div class="faq-item open" onclick="this.classList.toggle('open')">
+                <div class="faq-item" onclick="this.classList.toggle('open')">
                     <div class="faq-question">
                         <span>Сколько времени занимает подбор автомобиля?</span>
                         <span class="faq-toggle">+</span>
@@ -2232,9 +2271,8 @@
             };
 
             // ===== НАСТРОЙТЕ ОТПРАВКУ ЗАЯВОК =====
-            // Раскомментируйте нужный вариант:
+            // Раскомментируйте для Telegram:
             /*
-            // Telegram
             const BOT_TOKEN = 'ВАШ_ТОКЕН';
             const CHAT_ID = 'ВАШ_CHAT_ID';
             const text = `🔔 НОВАЯ ЗАЯВКА\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n🚗 Авто: ${formData.car || 'Не указан'}\n💰 Бюджет: ${formData.budget || 'Не указан'}\n📝 Сообщение: ${formData.message || 'Нет'}`;
@@ -2245,7 +2283,7 @@
             });
             */
 
-            // Демо-режим
+            // Демо-режим:
             success.classList.add('visible');
             submitBtn.textContent = '✓ Отправлено';
             form.reset();
@@ -2263,8 +2301,11 @@
         phoneInput.addEventListener('input', () => phoneError.classList.remove('visible'));
         consent.addEventListener('change', () => consentError.classList.remove('visible'));
 
-        // ===== FAQ =====
-        document.querySelectorAll('.faq-item').forEach(item => {
+        // ===== FAQ (один открыт по умолчанию) =====
+        document.querySelectorAll('.faq-item').forEach((item, index) => {
+            if (index === 0) {
+                item.classList.add('open');
+            }
             item.addEventListener('click', function() {
                 this.classList.toggle('open');
             });
