@@ -788,170 +788,6 @@
             color: var(--text-muted);
         }
 
-        /* ===== ПРИЛОЖЕНИЕ MAX ===== */
-        .app-section {
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .app-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(230, 57, 70, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .app-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .app-content .app-badge {
-            display: inline-block;
-            background: var(--accent-dim);
-            color: var(--accent);
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 4px 16px;
-            border-radius: 50px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(230, 57, 70, 0.2);
-        }
-
-        .app-content h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 16px;
-        }
-
-        .app-content h2 .highlight {
-            color: var(--accent);
-        }
-
-        .app-content p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            margin-bottom: 24px;
-            max-width: 90%;
-        }
-
-        .app-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 28px;
-        }
-
-        .app-feature {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .app-feature .check {
-            color: #4ade80;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .app-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .app-buttons .btn-app {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            padding: 12px 20px;
-            color: var(--text-primary);
-            transition: var(--transition);
-            font-weight: 500;
-        }
-
-        .app-buttons .btn-app:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        .app-buttons .btn-app .app-icon {
-            font-size: 1.8rem;
-        }
-
-        .app-buttons .btn-app .app-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-        }
-
-        .app-buttons .btn-app .app-text small {
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .app-buttons .btn-app .app-text span {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .app-phone {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .app-phone .phone-mockup {
-            max-width: 280px;
-            border-radius: 30px;
-            border: 3px solid var(--border-color);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-            background: var(--bg-primary);
-            padding: 12px;
-        }
-
-        .app-phone .phone-mockup img {
-            border-radius: 20px;
-            width: 100%;
-        }
-
-        .app-phone .phone-badge {
-            position: absolute;
-            bottom: -10px;
-            right: -10px;
-            background: var(--accent);
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
-        }
-
         /* ===== FAQ ===== */
         .faq-grid {
             display: grid;
@@ -1360,25 +1196,6 @@
             .numbers-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            .app-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .app-content p {
-                max-width: 100%;
-            }
-            .app-features {
-                grid-template-columns: 1fr;
-            }
-            .app-buttons {
-                justify-content: center;
-            }
-            .app-section {
-                padding: 40px 24px;
-            }
-            .app-phone .phone-mockup {
-                max-width: 200px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -1471,22 +1288,6 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            .app-section {
-                padding: 30px 16px;
-            }
-            .app-content h2 {
-                font-size: 1.8rem;
-            }
-            .app-features {
-                grid-template-columns: 1fr;
-            }
-            .app-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .app-buttons .btn-app {
-                justify-content: center;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1522,9 +1323,6 @@
             .contacts-actions .btn-primary,
             .contacts-actions .btn-outline {
                 width: 100%;
-            }
-            .app-phone .phone-mockup {
-                max-width: 160px;
             }
         }
 
@@ -1774,7 +1572,7 @@
         </div>
     </section>
 
-    <!-- ===== АВТОМОБИЛИ ===== -->
+    <!-- ===== АВТОМОБИЛИ (РЕАЛИСТИЧНЫЕ ДЛЯ РОССИИ) ===== -->
     <section class="section" id="cars">
         <div class="container">
             <div class="section-header center">
@@ -1784,49 +1582,66 @@
             </div>
 
             <div class="cars-grid">
-                <!-- Lada Vesta -->
+                <!-- 1. Lada Granta - самая народная -->
                 <div class="car-card fade-up delay-1">
                     <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=80" alt="Lada Vesta" loading="lazy" />
+                        <img src="https://avatars.mds.yandex.net/get-autoru-vos/2184377/7e99715c613cb0295e1b103da06bffcb/1200x900" alt="Lada Granta" loading="lazy" />
                         <span class="car-badge hit">🔥 ХИТ</span>
                     </div>
                     <div class="car-info">
-                        <div class="car-title">Lada Vesta SW</div>
-                        <div class="car-year">2023 · 15 000 км</div>
+                        <div class="car-title">Lada Granta</div>
+                        <div class="car-year">2023 · 8 000 км</div>
                         <div class="car-specs">
-                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.6 л, 106 л.с.</span></div>
+                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.6 л, 90 л.с.</span></div>
                             <div class="spec"><span class="label">Коробка</span><span class="value">Механика</span></div>
                         </div>
-                        <div class="car-price">1 890 000 ₽</div>
+                        <div class="car-price">890 000 ₽</div>
                     </div>
                 </div>
 
-                <!-- Hyundai Solaris -->
+                <!-- 2. Hyundai Solaris - народный седан -->
                 <div class="car-card fade-up delay-2">
                     <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80" alt="Hyundai Solaris" loading="lazy" />
+                        <img src="https://avatars.mds.yandex.net/get-autoru-vos/2051152/ec2d16ec7ca53000bff880bb129e4423/1200x900" alt="Hyundai Solaris" loading="lazy" />
                         <span class="car-badge new">НОВОЕ</span>
                     </div>
                     <div class="car-info">
                         <div class="car-title">Hyundai Solaris</div>
-                        <div class="car-year">2022 · 28 000 км</div>
+                        <div class="car-year">2022 · 25 000 км</div>
                         <div class="car-specs">
                             <div class="spec"><span class="label">Двигатель</span><span class="value">1.6 л, 123 л.с.</span></div>
                             <div class="spec"><span class="label">Коробка</span><span class="value">Автомат</span></div>
                         </div>
-                        <div class="car-price">2 100 000 ₽</div>
+                        <div class="car-price">1 990 000 ₽</div>
                     </div>
                 </div>
 
-                <!-- Toyota Camry -->
+                <!-- 3. Kia Rio - популярный хетчбэк -->
                 <div class="car-card fade-up delay-3">
                     <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=600&q=80" alt="Toyota Camry" loading="lazy" />
+                        <img src="https://avatars.mds.yandex.net/get-autoru-vos/2177916/5212080d24b16e06a2663527a55052a5/1200x900" alt="Kia Rio" loading="lazy" />
+                        <span class="car-badge">ПОПУЛЯРНЫЙ</span>
+                    </div>
+                    <div class="car-info">
+                        <div class="car-title">Kia Rio X</div>
+                        <div class="car-year">2022 · 20 000 км</div>
+                        <div class="car-specs">
+                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.4 л, 100 л.с.</span></div>
+                            <div class="spec"><span class="label">Коробка</span><span class="value">Автомат</span></div>
+                        </div>
+                        <div class="car-price">2 050 000 ₽</div>
+                    </div>
+                </div>
+
+                <!-- 4. Toyota Camry - бизнес-класс -->
+                <div class="car-card fade-up delay-4">
+                    <div class="car-image">
+                        <img src="https://avatars.mds.yandex.net/get-autoru-vos/2154617/1456a559519321a6b58bda70af4da457/1200x900" alt="Toyota Camry" loading="lazy" />
                         <span class="car-badge">ПРЕМИУМ</span>
                     </div>
                     <div class="car-info">
                         <div class="car-title">Toyota Camry</div>
-                        <div class="car-year">2021 · 35 000 км</div>
+                        <div class="car-year">2021 · 32 000 км</div>
                         <div class="car-specs">
                             <div class="spec"><span class="label">Двигатель</span><span class="value">2.5 л, 199 л.с.</span></div>
                             <div class="spec"><span class="label">Коробка</span><span class="value">Автомат</span></div>
@@ -1834,90 +1649,12 @@
                         <div class="car-price">3 650 000 ₽</div>
                     </div>
                 </div>
-
-                <!-- Kia Rio -->
-                <div class="car-card fade-up delay-4">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=600&q=80" alt="Kia Rio" loading="lazy" />
-                    </div>
-                    <div class="car-info">
-                        <div class="car-title">Kia Rio X</div>
-                        <div class="car-year">2022 · 22 000 км</div>
-                        <div class="car-specs">
-                            <div class="spec"><span class="label">Двигатель</span><span class="value">1.4 л, 100 л.с.</span></div>
-                            <div class="spec"><span class="label">Коробка</span><span class="value">Механика</span></div>
-                        </div>
-                        <div class="car-price">2 000 000 ₽</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ПРИЛОЖЕНИЕ MAX ===== -->
-    <section class="section" id="app" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="app-section">
-                <div class="app-grid">
-                    <div class="app-content">
-                        <div class="app-badge">📱 СКАЧАЙТЕ ПРИЛОЖЕНИЕ</div>
-                        <h2>Управляйте автоподбором <span class="highlight">с телефона</span></h2>
-                        <p>
-                            Приложение MAX — это полный контроль над подбором автомобиля.
-                            Отслеживайте статус заявки, получайте уведомления и общайтесь
-                            с экспертами в любое время.
-                        </p>
-                        <div class="app-features">
-                            <div class="app-feature">
-                                <span class="check">✓</span> Онлайн-чаты с экспертами
-                            </div>
-                            <div class="app-feature">
-                                <span class="check">✓</span> Уведомления о новых авто
-                            </div>
-                            <div class="app-feature">
-                                <span class="check">✓</span> История проверок в один клик
-                            </div>
-                            <div class="app-feature">
-                                <span class="check">✓</span> Личный кабинет с заявками
-                            </div>
-                        </div>
-                        <div class="app-buttons">
-                            <a href="#" class="btn-app">
-                                <span class="app-icon">📱</span>
-                                <span class="app-text">
-                                    <small>Скачать в</small>
-                                    <span>App Store</span>
-                                </span>
-                            </a>
-                            <a href="#" class="btn-app">
-                                <span class="app-icon">📱</span>
-                                <span class="app-text">
-                                    <small>Доступно в</small>
-                                    <span>Google Play</span>
-                                </span>
-                            </a>
-                            <a href="#" class="btn-app">
-                                <span class="app-icon">📱</span>
-                                <span class="app-text">
-                                    <small>Скачать</small>
-                                    <span>APK</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="app-phone">
-                        <div class="phone-mockup">
-                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80" alt="Приложение MAX" loading="lazy" />
-                        </div>
-                        <span class="phone-badge">⭐ 4.9</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== ОТЗЫВЫ ===== -->
-    <section class="section" id="reviews">
+    <section class="section" id="reviews" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header center">
                 <span class="subtitle">Отзывы</span>
@@ -1927,11 +1664,11 @@
             <div class="reviews-grid">
                 <div class="review-card fade-up delay-1">
                     <div class="review-stars">★★★★★</div>
-                    <blockquote>«Отличный сервис! Подобрали Lada Vesta за 3 дня. Полная диагностика, всё честно. Рекомендую!»</blockquote>
+                    <blockquote>«Отличный сервис! Подобрали Lada Granta за 2 дня. Полная диагностика, всё честно. Рекомендую!»</blockquote>
                     <div class="review-author">
-                        <div class="review-avatar">А</div>
+                        <div class="review-avatar">С</div>
                         <div>
-                            <div class="name">Алексей</div>
+                            <div class="name">Сергей</div>
                             <div class="detail">Москва, Россия</div>
                         </div>
                     </div>
@@ -1963,7 +1700,7 @@
     </section>
 
     <!-- ===== FAQ ===== -->
-    <section class="section" id="faq" style="background: var(--bg-secondary);">
+    <section class="section" id="faq">
         <div class="container">
             <div class="section-header center">
                 <span class="subtitle">Вопросы</span>
@@ -2011,8 +1748,8 @@
         </div>
     </section>
 
-    <!-- ===== КОНТАКТЫ ===== -->
-    <section class="section" id="contacts">
+    <!-- ===== КОНТАКТЫ (С MAX КАК ОТДЕЛЬНЫЙ МЕССЕНДЖЕР) ===== -->
+    <section class="section" id="contacts" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header center">
                 <span class="subtitle">Связь</span>
@@ -2021,6 +1758,7 @@
 
             <div class="contacts-grid">
                 <div class="contacts-info">
+                    <!-- Телефон -->
                     <div class="contact-item">
                         <div class="icon">📞</div>
                         <div class="info">
@@ -2028,6 +1766,8 @@
                             <span class="value"><a href="tel:+79123456789">+7 912 345 67 89</a></span>
                         </div>
                     </div>
+
+                    <!-- WhatsApp -->
                     <div class="contact-item">
                         <div class="icon">💬</div>
                         <div class="info">
@@ -2035,6 +1775,8 @@
                             <span class="value"><a href="https://wa.me/79123456789" target="_blank">+7 912 345 67 89</a></span>
                         </div>
                     </div>
+
+                    <!-- Telegram -->
                     <div class="contact-item">
                         <div class="icon">✈️</div>
                         <div class="info">
@@ -2042,6 +1784,17 @@
                             <span class="value"><a href="https://t.me/avtopodbor" target="_blank">@avtopodbor</a></span>
                         </div>
                     </div>
+
+                    <!-- MAX - НОВЫЙ МЕССЕНДЖЕР -->
+                    <div class="contact-item" style="border-color: var(--accent); background: var(--accent-dim);">
+                        <div class="icon" style="background: var(--accent); color: #fff;">⭐</div>
+                        <div class="info">
+                            <span class="label" style="color: var(--accent);">МЕССЕНДЖЕР MAX</span>
+                            <span class="value"><a href="#" style="color: var(--accent);">Написать в MAX</a></span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
                     <div class="contact-item">
                         <div class="icon">✉️</div>
                         <div class="info">
@@ -2049,6 +1802,8 @@
                             <span class="value"><a href="mailto:info@avtopodbor.ru">info@avtopodbor.ru</a></span>
                         </div>
                     </div>
+
+                    <!-- Адрес -->
                     <div class="contact-item">
                         <div class="icon">📍</div>
                         <div class="info">
@@ -2060,9 +1815,11 @@
                     <div class="contacts-actions">
                         <a href="tel:+79123456789" class="btn-primary">📞 Позвонить</a>
                         <a href="https://wa.me/79123456789" target="_blank" class="btn-outline">💬 WhatsApp</a>
+                        <a href="#" class="btn-primary" style="background: #fbbf24; color: #000;">⭐ MAX</a>
                     </div>
                 </div>
 
+                <!-- ===== ФОРМА ===== -->
                 <div class="form-wrapper" id="form">
                     <h3>Оставить заявку</h3>
                     <p class="form-sub">Заполните форму, и мы свяжемся с вами.</p>
@@ -2087,7 +1844,7 @@
 
                         <div class="form-group">
                             <label for="formBudget">Бюджет (₽)</label>
-                            <input type="text" id="formBudget" placeholder="Например: 2 000 000" />
+                            <input type="text" id="formBudget" placeholder="Например: 1 500 000" />
                         </div>
 
                         <div class="form-group">
@@ -2121,7 +1878,6 @@
             <p>&copy; 2026 АВТОПОДБОР. Все права защищены.</p>
             <div class="footer-links">
                 <a href="privacy.html" target="_blank">Политика конфиденциальности</a>
-                <a href="#app">Приложение MAX</a>
                 <a href="#form">Контакты</a>
             </div>
         </div>
@@ -2301,7 +2057,7 @@
         phoneInput.addEventListener('input', () => phoneError.classList.remove('visible'));
         consent.addEventListener('change', () => consentError.classList.remove('visible'));
 
-        // ===== FAQ (один открыт по умолчанию) =====
+        // ===== FAQ =====
         document.querySelectorAll('.faq-item').forEach((item, index) => {
             if (index === 0) {
                 item.classList.add('open');
