@@ -1,297 +1,480 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Политика конфиденциальности — АВТОПОДБОР</title>
-
+    <meta name="description" content="Политика конфиденциальности компании АВТОПОДБОР. Обработка персональных данных, права пользователей, согласие на обработку." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
+    
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #777777;
+            --accent: #e63946;
+            --accent-hover: #ff4d5a;
+            --border-color: #2a2a2a;
+            --radius: 16px;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --max-width: 900px;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b0d10;
-            color: #ddd;
+            font-family: var(--font);
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.7;
+            padding: 40px 20px 60px;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            width: min(900px, 92%);
-            margin: auto;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            padding: 50px 60px;
+            border: 1px solid var(--border-color);
         }
 
-        header {
-            padding: 25px 0;
-            border-bottom: 1px solid #25282d;
-            background: #080a0d;
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 32px;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
         }
 
-        .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: 900;
+        .back-link:hover {
+            color: var(--accent);
         }
 
-        .logo span {
-            color: #ff3b30;
-        }
-
-        main {
-            padding: 70px 0;
+        .back-link::before {
+            content: '←';
+            font-size: 1.2rem;
         }
 
         h1 {
-            color: white;
-            font-size: 42px;
-            line-height: 1.1;
-            margin-bottom: 35px;
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            color: var(--text-primary);
         }
 
-        h2 {
-            color: white;
-            margin-top: 40px;
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
         }
 
-        p, li {
-            color: #aaa;
+        .subtitle .highlight {
+            color: var(--accent);
+            font-weight: 600;
         }
 
-        strong {
-            color: #ddd;
+        .section-block {
+            margin-bottom: 36px;
         }
 
-        .notice {
-            background: #15181d;
-            border: 1px solid #2a2e35;
-            border-left: 4px solid #ff3b30;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 35px;
+        .section-block:last-child {
+            margin-bottom: 0;
         }
 
-        a {
-            color: #ff625a;
+        .section-block h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .back {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 13px 20px;
-            background: #ff3b30;
-            color: white;
+        .section-block h2 .accent {
+            color: var(--accent);
+        }
+
+        .section-block h2 .counter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .section-block p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .section-block ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0 8px;
+        }
+
+        .section-block ul li {
+            color: var(--text-secondary);
+            padding: 6px 0 6px 28px;
+            position: relative;
+        }
+
+        .section-block ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 4px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .section-block .highlight-box {
+            background: var(--bg-card);
+            border-left: 3px solid var(--accent);
+            padding: 16px 20px;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+            margin: 12px 0 8px;
         }
 
-        footer {
-            padding: 30px 0;
-            border-top: 1px solid #25282d;
-            color: #666;
-            font-size: 13px;
+        .section-block .highlight-box p {
+            color: var(--text-secondary);
+            margin-bottom: 4px;
         }
 
-        max-width: 600px {
+        .section-block .highlight-box strong {
+            color: var(--text-primary);
+        }
+
+        .placeholder {
+            display: inline-block;
+            background: rgba(230, 57, 70, 0.12);
+            color: var(--accent);
+            padding: 2px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(230, 57, 70, 0.2);
+        }
+
+        .date-updated {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 24px;
+            }
+
             h1 {
-                font-size: 32px;
+                font-size: 1.8rem;
+            }
+
+            .section-block h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-block ul li {
+                padding-left: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 12px 40px;
+            }
+
+            .container {
+                padding: 20px 16px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .section-block h2 {
+                font-size: 1.05rem;
+            }
+
+            .section-block h2 .counter {
+                width: 24px;
+                height: 24px;
+                font-size: 0.7rem;
+            }
+
+            .back-link {
+                font-size: 0.85rem;
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
-
 <body>
-
-<header>
     <div class="container">
+        <!-- Ссылка назад -->
+        <a href="index.html" class="back-link">Вернуться на главную</a>
 
-        <div class="logo">
-            АВТО<span>ПОДБОР</span>
+        <!-- Заголовок -->
+        <h1>Политика конфиденциальности</h1>
+        <div class="subtitle">
+            Компания <span class="highlight">АВТОПОДБОР</span> уважает вашу приватность и обязуется защищать персональные данные.
+            <br />
+            <span style="font-size: 0.9rem; color: var(--text-muted);">
+                Актуально на: <strong style="color: var(--text-primary);">19 августа 2026 года</strong>
+            </span>
         </div>
 
+        <!-- 1. Общие положения -->
+        <div class="section-block">
+            <h2><span class="counter">1</span> Общие <span class="accent">положения</span></h2>
+            <p>
+                Настоящая Политика конфиденциальности (далее — Политика) регулирует порядок обработки и защиты персональных данных
+                пользователей сайта <strong>avtopodbor</strong> (далее — Сайт), принадлежащего компании
+                <span class="placeholder">[НАЗВАНИЕ КОМПАНИИ]</span>.
+            </p>
+            <p>
+                Политика разработана в соответствии с требованиями:
+            </p>
+            <ul>
+                <li>Общего регламента по защите данных (GDPR) Европейского Союза;</li>
+                <li>Федерального закона о защите персональных данных (применимого законодательства);</li>
+                <li>Иных нормативных актов в области защиты данных.</li>
+            </ul>
+            <p>
+                Используя Сайт и оставляя заявку, вы даёте своё согласие на обработку персональных данных в соответствии с настоящей Политикой.
+            </p>
+        </div>
+
+        <!-- 2. Какие данные собираются -->
+        <div class="section-block">
+            <h2><span class="counter">2</span> Какие персональные данные <span class="accent">собираются</span></h2>
+            <p>Мы собираем только те данные, которые вы добровольно предоставляете при заполнении формы заявки:</p>
+            <ul>
+                <li><strong>Имя</strong> — для персонализированного общения;</li>
+                <li><strong>Контактный телефон</strong> — для связи по вопросам подбора автомобиля;</li>
+                <li><strong>Email</strong> (опционально) — для отправки информации о найденных автомобилях;</li>
+                <li><strong>Информация о желаемом автомобиле</strong> — марка, модель, бюджет, дополнительные пожелания;</li>
+                <li><strong>Данные, указанные в сообщении</strong> — дополнительная информация, которую вы решите сообщить.</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>⚠️ Важно:</strong> Мы не собираем и не храним:</p>
+                <ul>
+                    <li>Платёжные данные (номера карт, счета);</li>
+                    <li>Паспортные данные;</li>
+                    <li>Данные о состоянии здоровья;</li>
+                    <li>Биометрические данные.</li>
+                </ul>
+            </div>
+            <p>
+                Сайт использует <strong>cookie-файлы</strong> только для функциональных целей (запоминание согласия на обработку данных).
+                Мы не используем аналитические системы, рекламные трекеры или системы веб-аналитики без вашего явного согласия.
+            </p>
+        </div>
+
+        <!-- 3. Цели обработки -->
+        <div class="section-block">
+            <h2><span class="counter">3</span> Цели <span class="accent">обработки</span></h2>
+            <p>Ваши персональные данные обрабатываются исключительно для следующих целей:</p>
+            <ul>
+                <li><strong>Обработка заявок</strong> — подбор автомобиля в соответствии с вашими пожеланиями;</li>
+                <li><strong>Связь с вами</strong> — уточнение деталей, согласование встреч, предоставление информации;</li>
+                <li><strong>Предоставление услуг</strong> — проверка автомобилей, диагностика, юридическое сопровождение;</li>
+                <li><strong>Улучшение качества обслуживания</strong> — анализ запросов для повышения уровня сервиса;</li>
+                <li><strong>Выполнение обязательств</strong> — соблюдение договорных отношений.</li>
+            </ul>
+            <p>
+                Мы не используем ваши данные для маркетинговых рассылок, таргетированной рекламы или передачи третьим лицам без вашего согласия.
+            </p>
+        </div>
+
+        <!-- 4. Правовое основание -->
+        <div class="section-block">
+            <h2><span class="counter">4</span> Правовое основание <span class="accent">обработки</span></h2>
+            <p>Обработка персональных данных осуществляется на следующих правовых основаниях:</p>
+            <ul>
+                <li><strong>Ваше согласие</strong> — вы даёте явное согласие на обработку данных при заполнении формы (через чекбокс);</li>
+                <li><strong>Исполнение договора</strong> — обработка данных необходима для предоставления вам услуг автоподбора;</li>
+                <li><strong>Соблюдение юридических обязательств</strong> — обработка данных в соответствии с требованиями законодательства.</li>
+            </ul>
+            <div class="highlight-box">
+                <p>
+                    <strong>🔒 GDPR-совместимость:</strong> Мы не используем заранее установленные галочки (pre-ticked boxes).
+                    Согласие на обработку данных получается только через активное действие пользователя — установку чекбокса.
+                </p>
+            </div>
+        </div>
+
+        <!-- 5. Срок хранения -->
+        <div class="section-block">
+            <h2><span class="counter">5</span> Срок <span class="accent">хранения</span></h2>
+            <p>
+                Персональные данные хранятся в течение <span class="placeholder">[СРОК ХРАНЕНИЯ]</span> с момента последнего взаимодействия.
+                После истечения этого срока данные:
+            </p>
+            <ul>
+                <li>Анонимизируются (обезличиваются) для статистического анализа;</li>
+                <li>Удаляются без возможности восстановления.</li>
+            </ul>
+            <p>
+                Вы можете запросить удаление своих данных в любой момент (см. раздел <strong>«Права пользователя»</strong>).
+            </p>
+        </div>
+
+        <!-- 6. Передача данных третьим лицам -->
+        <div class="section-block">
+            <h2><span class="counter">6</span> Передача данных <span class="accent">третьим лицам</span></h2>
+            <p>
+                Мы <strong>не передаём</strong> ваши персональные данные третьим лицам, за исключением случаев, предусмотренных законом:
+            </p>
+            <ul>
+                <li>По требованию государственных органов (в рамках юридических процедур);</li>
+                <li>Для исполнения судебных решений;</li>
+                <li>Для защиты прав и законных интересов компании.</li>
+            </ul>
+            <p>
+                В рамках оказания услуг мы можем привлекать партнёров (дилерские центры, сервисные станции), но только с вашего согласия
+                и только для выполнения конкретных задач по подбору/проверке автомобиля.
+            </p>
+        </div>
+
+        <!-- 7. Защита персональных данных -->
+        <div class="section-block">
+            <h2><span class="counter">7</span> Защита персональных <span class="accent">данных</span></h2>
+            <p>Мы принимаем все необходимые меры для защиты ваших данных:</p>
+            <ul>
+                <li><strong>Шифрование</strong> — все данные передаются по защищённому протоколу HTTPS;</li>
+                <li><strong>Ограничение доступа</strong> — доступ к данным имеют только уполномоченные сотрудники;</li>
+                <li><strong>Регулярные проверки</strong> — контроль за соблюдением мер безопасности;</li>
+                <li><strong>Обучение персонала</strong> — сотрудники проходят инструктаж по защите данных;</li>
+                <li><strong>Технические меры</strong> — защита от несанкционированного доступа, взломов и утечек.</li>
+            </ul>
+            <div class="highlight-box">
+                <p>
+                    <strong>🔐 Безопасность:</strong> Мы не храним персональные данные в публичном доступе, в HTML-коде,
+                    CSS или JavaScript-файлах. Все данные обрабатываются на защищённых серверах.
+                </p>
+            </div>
+        </div>
+
+        <!-- 8. Права пользователя -->
+        <div class="section-block">
+            <h2><span class="counter">8</span> Права <span class="accent">пользователя</span></h2>
+            <p>В соответствии с GDPR и применимым законодательством вы имеете следующие права:</p>
+            <ul>
+                <li><strong>Право на доступ</strong> — запросить копию ваших персональных данных;</li>
+                <li><strong>Право на исправление</strong> — изменить неточные или неполные данные;</li>
+                <li><strong>Право на удаление</strong> («право на забвение») — запросить удаление данных;</li>
+                <li><strong>Право на ограничение обработки</strong> — временно ограничить использование данных;</li>
+                <li><strong>Право на переносимость</strong> — получить данные в структурированном формате;</li>
+                <li><strong>Право на возражение</strong> — отказаться от обработки в определённых случаях;</li>
+                <li><strong>Право на отзыв согласия</strong> — отозвать ранее данное согласие в любое время.</li>
+            </ul>
+            <p>
+                Для реализации своих прав свяжитесь с нами через контакты, указанные в разделе <strong>«Контакты оператора»</strong>.
+                Мы ответим на ваш запрос в течение <strong>30 дней</strong>.
+            </p>
+        </div>
+
+        <!-- 9. Отзыв согласия -->
+        <div class="section-block">
+            <h2><span class="counter">9</span> Отзыв <span class="accent">согласия</span></h2>
+            <p>
+                Вы можете отозвать своё согласие на обработку персональных данных в любой момент, отправив письменный запрос
+                на наш электронный адрес <span class="placeholder">[EMAIL]</span> или через контактный телефон
+                <span class="placeholder">[ТЕЛЕФОН]</span>.
+            </p>
+            <p>
+                После отзыва согласия мы прекратим обработку данных и удалим вашу информацию в соответствии с требованиями законодательства.
+            </p>
+            <div class="highlight-box">
+                <p>
+                    <strong>📩 Важно:</strong> Отзыв согласия не влияет на законность обработки, которая проводилась до момента отзыва.
+                </p>
+            </div>
+        </div>
+
+        <!-- 10. Контакты оператора -->
+        <div class="section-block">
+            <h2><span class="counter">10</span> Контакты <span class="accent">оператора</span></h2>
+            <p>
+                Оператор обработки персональных данных — компания <span class="placeholder">[НАЗВАНИЕ КОМПАНИИ]</span>.
+            </p>
+            <div class="highlight-box">
+                <p><strong>Реквизиты оператора:</strong></p>
+                <p>
+                    <strong>Название:</strong> <span class="placeholder">[НАЗВАНИЕ КОМПАНИИ]</span><br />
+                    <strong>ФИО / ИП:</strong> <span class="placeholder">[ФИО / ИП]</span><br />
+                    <strong>Юридический адрес:</strong> <span class="placeholder">[АДРЕС]</span><br />
+                    <strong>Email для запросов:</strong> <span class="placeholder">[EMAIL]</span><br />
+                    <strong>Контактный телефон:</strong> <span class="placeholder">[ТЕЛЕФОН]</span>
+                </p>
+            </div>
+            <p>
+                По всем вопросам, связанным с обработкой персональных данных, вы можете связаться с нами по указанным контактам.
+                Мы всегда готовы ответить на ваши вопросы и помочь с реализацией ваших прав.
+            </p>
+        </div>
+
+        <!-- 11. Изменение политики -->
+        <div class="section-block">
+            <h2><span class="counter">11</span> Изменение <span class="accent">политики</span></h2>
+            <p>
+                Мы оставляем за собой право вносить изменения в настоящую Политику конфиденциальности.
+                Все изменения публикуются на этой странице с указанием даты последнего обновления.
+            </p>
+            <p>
+                Рекомендуем периодически проверять данную страницу для ознакомления с актуальной версией Политики.
+                Продолжая использовать Сайт после внесения изменений, вы соглашаетесь с обновлённой редакцией.
+            </p>
+        </div>
+
+        <!-- Дата обновления -->
+        <div class="date-updated">
+            <p>
+                Политика конфиденциальности актуальна на <strong>19 августа 2026 года</strong>.<br />
+                Версия 1.0
+            </p>
+            <p style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">
+                <a href="index.html" style="color: var(--accent); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ff4d5a'" onmouseout="this.style.color='var(--accent)'">
+                    ← Вернуться на главную
+                </a>
+            </p>
+        </div>
     </div>
-</header>
-
-<main>
-
-<div class="container">
-
-    <h1>Политика конфиденциальности</h1>
-
-    <div class="notice">
-        <strong>Важно:</strong>
-        перед публикацией сайта замените данные владельца,
-        контактный адрес электронной почты, телефон и другие
-        сведения на реальные данные вашего бизнеса.
-    </div>
-
-    <h2>1. Общие положения</h2>
-
-    <p>
-        Настоящая Политика конфиденциальности описывает порядок
-        обработки персональных данных пользователей сайта
-        «АВТОПОДБОР».
-    </p>
-
-    <p>
-        Оператор персональных данных:
-        <strong>[НАЗВАНИЕ КОМПАНИИ / ИП / ФИО]</strong>.
-    </p>
-
-    <p>
-        Контактный адрес:
-        <strong>[АДРЕС]</strong>.
-    </p>
-
-    <p>
-        Электронная почта:
-        <strong>[EMAIL]</strong>.
-    </p>
-
-    <p>
-        Телефон:
-        <strong>[ТЕЛЕФОН]</strong>.
-    </p>
-
-    <h2>2. Какие данные мы можем получать</h2>
-
-    <p>
-        При заполнении формы на сайте пользователь может предоставить:
-    </p>
-
-    <ul>
-        <li>имя;</li>
-        <li>номер телефона;</li>
-        <li>информацию об интересующем автомобиле;</li>
-        <li>текст сообщения и другую информацию, которую пользователь добровольно указывает в форме.</li>
-    </ul>
-
-    <h2>3. Для чего используются данные</h2>
-
-    <p>
-        Персональные данные используются для:
-    </p>
-
-    <ul>
-        <li>обработки заявки пользователя;</li>
-        <li>связи с пользователем по указанному телефону или иным предоставленным контактным данным;</li>
-        <li>предоставления информации об услугах автоподбора;</li>
-        <li>организации консультации и дальнейшего взаимодействия с клиентом.</li>
-    </ul>
-
-    <h2>4. Правовое основание обработки</h2>
-
-    <p>
-        Обработка персональных д
-
-
-анных осуществляется на основании
-        применимого законодательства и, когда это необходимо,
-        согласия пользователя.
-    </p>
-
-    <p>
-        Согласие предоставляется посредством самостоятельного
-        установления пользователем соответствующей отметки
-        в форме заявки.
-    </p>
-
-    <h2>5. Срок хранения</h2>
-
-    <p>
-        Персональные данные хранятся только в течение периода,
-        необходимого для достижения целей их обработки, либо
-        в течение срока, установленного применимым
-        законодательством.
-    </p>
-
-    <p>
-        Конкретный срок хранения:
-        <strong>[УКАЖИТЕ СРОК ХРАНЕНИЯ]</strong>.
-    </p>
-
-    <h2>6. Передача данных третьим лицам</h2>
-
-    <p>
-        Персональные данные не передаются третьим лицам для
-        самостоятельного использования, кроме случаев,
-        предусмотренных законодательством, либо случаев,
-        когда привлечение соответствующего обработчика необходимо
-        для работы сервиса и предусмотрено применимыми правилами
-        защиты данных.
-    </p>
-
-    <h2>7. Защита данных</h2>
-
-    <p>
-        Оператор принимает разумные технические и организационные
-        меры для защиты персональных данных от несанкционированного
-        доступа, изменения, раскрытия или уничтожения.
-    </p>
-
-    <h2>8. Права пользователя</h2>
-
-    <p>
-        В зависимости от применимого законодательства пользователь
-        может иметь право запросить доступ к своим персональным
-        данным, их исправление, удаление или ограничение обработки,
-        а также отозвать согласие в случаях, когда обработка основана
-        на согласии.
-    </p>
-
-    <p>
-        Для обращения по вопросам персональных данных используйте:
-        <strong>[EMAIL]</strong>.
-    </p>
-
-    <h2>9. Отзыв согласия</h2>
-
-    <p>
-        Пользователь может отозвать согласие на обработку данных,
-        направив соответствующий запрос на:
-        <strong>[EMAIL]</strong>.
-    </p>
-
-    <h2>10. Изменение политики</h2>
-
-    <p>
-        Оператор может обновлять настоящую Политику
-        конфиденциальности. Актуальная версия публикуется
-        на данной странице.
-    </p>
-
-    <h2>11. Контакты</h2>
-
-    <p>
-        <strong>[НАЗВАНИЕ КОМПАНИИ / ИП / ФИО]</strong>
-    </p>
-
-    <p>
-        Телефон: <strong>[ТЕЛЕФОН]</strong>
-
-        Email: <strong>[EMAIL]</strong>
-
-        Адрес: <strong>[АДРЕС]</strong>
-    </p>
-
-    <a class="back" href="index.html">
-        ← Вернуться на сайт
-    </a>
-
-</div>
-
-</main>
-
-<footer>
-    <div class="container">
-        © 2026 АВТОПОДБОР. Политика конфиденциальности.
-    </div>
-</footer>
-
 </body>
 </html>
-
-
