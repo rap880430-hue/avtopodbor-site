@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>АВТОПОДБОР — профессиональный подбор автомобилей</title>
-    <meta name="description" content="Профессиональный автоподбор в Германии и Европе. Найдём автомобиль, который стоит своих денег. Проверка, диагностика, юридическое сопровождение." />
+    <title>АВТОПОДБОР — профессиональный подбор автомобилей в России</title>
+    <meta name="description" content="Профессиональный автоподбор в России. Найдём автомобиль, который стоит своих денег. Проверка, диагностика, юридическое сопровождение." />
     <meta property="og:title" content="АВТОПОДБОР — профессиональный подбор автомобилей" />
     <meta property="og:description" content="Найдём автомобиль, который стоит своих денег. Проверка, диагностика, юридическое сопровождение." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://мойлогин.github.io/avtopodbor/" />
     <meta name="theme-color" content="#0a0a0a" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
 
     <style>
-        /* ===== RESET & BASE ===== */
         *,
         *::before,
         *::after {
@@ -77,7 +75,6 @@
             padding: 0 24px;
         }
 
-        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -92,7 +89,6 @@
             background: var(--accent-hover);
         }
 
-        /* ===== BUTTONS ===== */
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -116,10 +112,6 @@
             background: var(--accent-hover);
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(230, 57, 70, 0.35);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
         }
 
         .btn-outline {
@@ -146,13 +138,6 @@
             transform: translateY(-2px);
         }
 
-        .btn-small {
-            padding: 10px 24px;
-            font-size: 0.85rem;
-            min-height: 42px;
-        }
-
-        /* ===== HEADER / NAV ===== */
         .header {
             position: fixed;
             top: 0;
@@ -239,7 +224,6 @@
             color: var(--accent) !important;
         }
 
-        /* Mobile menu toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -272,7 +256,6 @@
             transform: rotate(-45deg) translate(5px, -5px);
         }
 
-        /* ===== HERO ===== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -286,8 +269,7 @@
             position: absolute;
             inset: 0;
             z-index: 0;
-            background:
-                radial-gradient(ellipse at 70% 50%, rgba(230, 57, 70, 0.12) 0%, transparent 60%),
+            background: radial-gradient(ellipse at 70% 50%, rgba(230, 57, 70, 0.12) 0%, transparent 60%),
                 radial-gradient(ellipse at 30% 80%, rgba(230, 57, 70, 0.05) 0%, transparent 50%),
                 var(--bg-primary);
         }
@@ -296,8 +278,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.25;
-            filter: grayscale(0.3) brightness(0.5);
+            opacity: 0.3;
+            filter: grayscale(0.2) brightness(0.5);
         }
 
         .hero-content {
@@ -378,7 +360,6 @@
             color: var(--text-muted);
         }
 
-        /* ===== SECTION TITLES ===== */
         .section {
             padding: 80px 0;
         }
@@ -424,7 +405,6 @@
             margin-right: auto;
         }
 
-        /* ===== SERVICES ===== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -499,7 +479,6 @@
             border: 1px solid rgba(230, 57, 70, 0.15);
         }
 
-        /* ===== HOW WE WORK ===== */
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -548,7 +527,6 @@
             color: var(--text-secondary);
         }
 
-        /* ===== WHY CHOOSE US ===== */
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -587,7 +565,6 @@
             color: var(--text-secondary);
         }
 
-        /* ===== CARS ===== */
         .cars-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -696,7 +673,6 @@
             color: var(--text-muted);
         }
 
-        /* ===== REVIEWS ===== */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -761,7 +737,6 @@
             color: var(--text-muted);
         }
 
-        /* ===== CONTACTS ===== */
         .contacts-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -840,7 +815,6 @@
             min-width: 140px;
         }
 
-        /* ===== FORM ===== */
         .form-wrapper {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -983,7 +957,6 @@
             display: block;
         }
 
-        /* ===== COOKIE BANNER ===== */
         .cookie-banner {
             position: fixed;
             bottom: 0;
@@ -1043,7 +1016,6 @@
             min-height: 44px;
         }
 
-        /* ===== FOOTER ===== */
         .footer {
             border-top: 1px solid var(--border-color);
             padding: 32px 0;
@@ -1077,12 +1049,10 @@
             gap: 20px;
         }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .contacts-grid {
                 grid-template-columns: 1fr;
             }
-
             .form-wrapper {
                 padding: 28px;
             }
@@ -1092,11 +1062,9 @@
             .header-inner {
                 height: 64px;
             }
-
             .logo {
                 font-size: 1.3rem;
             }
-
             .nav {
                 position: fixed;
                 top: 0;
@@ -1111,87 +1079,68 @@
                 border-left: 1px solid var(--border-color);
                 overflow-y: auto;
             }
-
             .nav.open {
                 right: 0;
             }
-
             .nav a {
                 font-size: 1.05rem;
                 width: 100%;
                 padding: 8px 0;
             }
-
             .nav .nav-phone {
                 font-size: 1.1rem !important;
                 margin-top: 8px;
             }
-
             .menu-toggle {
                 display: flex;
             }
-
             .hero {
                 min-height: auto;
                 padding: 100px 0 60px;
             }
-
             .hero h1 {
                 font-size: 2.2rem;
             }
-
             .hero-stats {
                 gap: 24px;
                 flex-wrap: wrap;
             }
-
             .hero-stats-item .number {
                 font-size: 1.4rem;
             }
-
             .section {
                 padding: 56px 0;
             }
-
             .services-grid {
                 grid-template-columns: 1fr;
             }
-
             .steps-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
             .benefits-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
             .cars-grid {
                 grid-template-columns: 1fr;
             }
-
             .reviews-grid {
                 grid-template-columns: 1fr;
             }
-
             .form-wrapper {
                 padding: 20px;
             }
-
             .cookie-banner-inner {
                 flex-direction: column;
                 align-items: stretch;
                 gap: 16px;
             }
-
             .cookie-banner .cookie-actions {
                 justify-content: flex-end;
             }
-
             .footer-inner {
                 flex-direction: column;
                 text-align: center;
             }
-
             .footer-links {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -1202,44 +1151,35 @@
             .container {
                 padding: 0 16px;
             }
-
             .hero h1 {
                 font-size: 1.8rem;
             }
-
             .hero-actions {
                 flex-direction: column;
                 width: 100%;
             }
-
             .hero-actions .btn-primary {
                 width: 100%;
                 justify-content: center;
             }
-
             .steps-grid {
                 grid-template-columns: 1fr;
             }
-
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
-
             .form-checkbox {
                 align-items: flex-start;
             }
-
             .contacts-actions {
                 flex-direction: column;
             }
-
             .contacts-actions .btn-primary,
             .contacts-actions .btn-outline {
                 width: 100%;
             }
         }
 
-        /* ===== ANIMATIONS ===== */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -1273,7 +1213,6 @@
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="#" class="logo">АВТО<span>ПОДБОР</span></a>
@@ -1284,7 +1223,7 @@
                 <a href="#cars">Автомобили</a>
                 <a href="#reviews">Отзывы</a>
                 <a href="#contacts">Контакты</a>
-                <a href="tel:+49123456789" class="nav-phone">+49 123 456 789</a>
+                <a href="tel:+79123456789" class="nav-phone">+7 912 345 67 89</a>
             </nav>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
@@ -1295,632 +1234,19 @@
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
     <section class="hero" id="hero" aria-label="Главный экран">
         <div class="hero-bg">
-            <!-- Замените src на путь к вашему фото автомобиля -->
             <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1600&q=80" alt="Премиальный автомобиль" loading="lazy" />
         </div>
         <div class="container hero-content">
-            <span class="hero-badge">★ Профессиональный автоподбор</span>
+            <span class="hero-badge">★ Профессиональный автоподбор в России</span>
             <h1>
                 Найдём автомобиль,<br />
                 <span class="highlight">который стоит своих денег</span>
             </h1>
             <p>
                 Профессиональный подбор, полная проверка и юридическое сопровождение.
-                Поможем выбрать идеальный автомобиль в Германии и Европе.
+                Поможем выбрать идеальный автомобиль в любом регионе России.
             </p>
             <div class="hero-actions">
-                <a href="#form" class="btn-primary">Оставить заявку</a>
-                <a href="#services" class="btn-outline">Узнать услуги</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stats-item">
-                    <span class="number">500+</span>
-                    <span class="label">Подобранных авто</span>
-                </div>
-                <div class="hero-stats-item">
-                    <span class="number">98%</span>
-                    <span class="label">Довольных клиентов</span>
-                </div>
-                <div class="hero-stats-item">
-                    <span class="number">7 лет</span>
-                    <span class="label">Опыта на рынке</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SERVICES ===== -->
-    <section class="section" id="services" aria-label="Услуги">
-        <div class="container">
-            <div class="section-header">
-                <span class="subtitle">Наши услуги</span>
-                <h2>Что мы <span class="highlight">предлагаем</span></h2>
-                <p>Полный спектр услуг по подбору и проверке автомобилей.</p>
-            </div>
-
-            <div class="services-grid" id="servicesGrid">
-                <!-- Карточки заполняются через JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== HOW WE WORK ===== -->
-    <section class="section" id="how" aria-label="Как мы работаем" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header center">
-                <span class="subtitle">Процесс</span>
-                <h2>Как мы <span class="highlight">работаем</span></h2>
-                <p>Прозрачный и понятный процесс от заявки до покупки.</p>
-            </div>
-
-            <div class="steps-grid">
-                <div class="step-item fade-up delay-1">
-                    <div class="step-number">1</div>
-                    <h4>Заявка</h4>
-                    <p>Оставляете заявку на сайте или по телефону</p>
-                </div>
-                <div class="step-item fade-up delay-2">
-                    <div class="step-number">2</div>
-                    <h4>Обсуждение</h4>
-                    <p>Уточняем требования, бюджет и пожелания</p>
-                </div>
-                <div class="step-item fade-up delay-3">
-                    <div class="step-number">3</div>
-                    <h4>Поиск авто</h4>
-                    <p>Находим лучшие варианты на рынке Германии и Европы</p>
-                </div>
-                <div class="step-item fade-up delay-4">
-                    <div class="step-number">4</div>
-                    <h4>Проверка</h4>
-                    <p>Полная диагностика, проверка истории и юридическая чистота</p>
-                </div>
-                <div class="step-item fade-up delay-5">
-                    <div class="step-number">5</div>
-                    <h4>Покупка</h4>
-                    <p>Сопровождаем до сделки и передачи автомобиля</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== WHY CHOOSE US ===== -->
-    <section class="section" id="why" aria-label="Почему выбирают нас">
-        <div class="container">
-            <div class="section-header center">
-                <span class="subtitle">Преимущества</span>
-                <h2>Почему <span class="highlight">выбирают нас</span></h2>
-            </div>
-
-            <div class="benefits-grid">
-                <div class="benefit-item fade-up delay-1">
-                    <span class="benefit-icon">⏱️</span>
-                    <h4>Экономия времени</h4>
-                    <p>Мы берём на себя весь поиск и проверку</p>
-                </div>
-                <div class="benefit-item fade-up delay-2">
-                    <span class="benefit-icon">🔍</span>
-                    <h4>Проверка перед покупкой</h4>
-                    <p>Диагностика и проверка истории каждого авто</p>
-                </div>
-                <div class="benefit-item fade-up delay-3">
-                    <span class="benefit-icon">👨‍🔧</span>
-                    <h4>Опыт специалистов</h4>
-                    <p>Более 7 лет в автоподборе и диагностике</p>
-                </div>
-                <div class="benefit-item fade-up delay-4">
-                    <span class="benefit-icon">🌍</span>
-                    <h4>Работа по всей Европе</h4>
-                    <p>Подбираем автомобили в Германии и ЕС</p>
-                </div>
-                <div class="benefit-item fade-up delay-5">
-                    <span class="benefit-icon">🤝</span>
-                    <h4>Помощь на всех этапах</h4>
-                    <p>Сопровождаем от выбора до регистрации</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CARS ===== -->
-    <section class="section" id="cars" aria-label="Автомобили" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header center">
-                <span class="subtitle">Автопарк</span>
-                <h2>Наши <span class="highlight">предложения</span></h2>
-                <p>Актуальные автомобили с полной проверкой.</p>
-            </div>
-
-            <div class="cars-grid" id="carsGrid">
-                <!-- Карточки автомобилей через JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== REVIEWS ===== -->
-    <section class="section" id="reviews" aria-label="Отзывы клиентов">
-        <div class="container">
-            <div class="section-header center">
-                <span class="subtitle">Отзывы</span>
-                <h2>Что говорят <span class="highlight">клиенты</span></h2>
-            </div>
-
-            <div class="reviews-grid" id="reviewsGrid">
-                <!-- Отзывы через JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTACTS + FORM ===== -->
-    <section class="section" id="contacts" aria-label="Контакты" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header center">
-                <span class="subtitle">Связь</span>
-                <h2>Наши <span class="highlight">контакты</span></h2>
-            </div>
-
-            <div class="contacts-grid">
-                <!-- Контакты -->
-                <div class="contacts-info">
-                    <div class="contact-item">
-                        <div class="icon">📞</div>
-                        <div class="info">
-                            <span class="label">Телефон</span>
-                            <span class="value"><a href="tel:+49123456789">+49 123 456 789</a></span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">💬</div>
-                        <div class="info">
-                            <span class="label">WhatsApp</span>
-                            <span class="value"><a href="https://wa.me/49123456789" target="_blank">+49 123 456 789</a></span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">✈️</div>
-                        <div class="info">
-                            <span class="label">Telegram</span>
-                            <span class="value"><a href="https://t.me/avtopodbor" target="_blank">@avtopodbor</a></span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">✉️</div>
-                        <div class="info">
-                            <span class="label">Email</span>
-                            <span class="value"><a href="mailto:info@avtopodbor.de">info@avtopodbor.de</a></span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">📍</div>
-                        <div class="info">
-                            <span class="label">Город</span>
-                            <span class="value">Берлин, Германия</span>
-                        </div>
-                    </div>
-
-                    <div class="contacts-actions">
-                        <a href="tel:+49123456789" class="btn-primary">📞 Позвонить</a>
-                        <a href="https://wa.me/49123456789" target="_blank" class="btn-outline">💬 WhatsApp</a>
-                    </div>
-                </div>
-
-                <!-- Форма -->
-                <div class="form-wrapper" id="form">
-                    <h3>Оставить заявку</h3>
-                    <p class="form-sub">Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
-
-                    <form id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label for="formName">Имя *</label>
-                            <input type="text" id="formName" placeholder="Ваше имя" required />
-                            <div class="form-error" id="nameError">Пожалуйста, укажите ваше имя.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="formPhone">Телефон *</label>
-                            <input type="tel" id="formPhone" placeholder="+49 123 456 789" required />
-                            <div class="form-error" id="phoneError">Пожалуйста, укажите номер телефона.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="formCar">Какой автомобиль ищете?</label>
-                            <input type="text" id="formCar" placeholder="Марка, модель, год" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="formBudget">Бюджет (€)</label>
-                            <input type="text" id="formBudget" placeholder="Например: 20 000 – 30 000" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="formMessage">Дополнительная информация</label>
-                            <textarea id="formMessage" placeholder="Ваши пожелания, требования..." rows="3"></textarea>
-                        </div>
-
-                        <div class="form-checkbox">
-                            <input type="checkbox" id="formConsent" />
-                            <label for="formConsent">
-                                Я согласен(на) на обработку моих персональных данных для обработки заявки и ознакомился(ась) с
-                                <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.
-                            </label>
-                        </div>
-                        <div class="form-error" id="consentError">Необходимо дать согласие на обработку данных.</div>
-
-                        <button type="submit" class="btn-primary" style="width:100%;">Отправить заявку</button>
-
-                        <div class="form-success" id="formSuccess">
-                            ✅ Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <p>&copy; 2026 АВТОПОДБОР. Все права защищены.</p>
-            <div class="footer-links">
-                <a href="privacy.html" target="_blank">Политика конфиденциальности</a>
-                <a href="#form">Контакты</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ===== COOKIE BANNER ===== -->
-    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Согласие на использование cookies">
-        <div class="cookie-banner-inner">
-            <p>
-                Мы используем cookies для улучшения работы сайта. Продолжая использовать сайт, вы соглашаетесь с
-                <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.
-            </p>
-            <div class="cookie-actions">
-                <button class="btn-outline" id="cookieDecline" style="padding:10px 24px;font-size:0.85rem;min-height:44px;">Отклонить</button>
-                <button class="btn-primary" id="cookieAccept" style="padding:10px 28px;font-size:0.85rem;min-height:44px;">Принять</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SCRIPTS ===== -->
-    <script>
-        // ============================================================
-        // 1. ДАННЫЕ (легко изменяемые)
-        // ============================================================
-
-        // Цены услуг (изменяйте здесь)
-        const SERVICES = [{
-            icon: '🔍',
-            title: 'Подбор автомобиля под ключ',
-            desc: 'Найдём идеальный автомобиль по вашим критериям на рынке Германии и Европы.',
-            price: 'от 499 €'
-        }, {
-            icon: '🛠️',
-            title: 'Проверка перед покупкой',
-            desc: 'Полная диагностика, проверка истории, тест-драйв и оценка состояния.',
-            price: 'от 249 €'
-        }, {
-            icon: '⚙️',
-            title: 'Диагностика',
-            desc: 'Профессиональная компьютерная и техническая диагностика автомобиля.',
-            price: 'от 149 €'
-        }, {
-            icon: '📜',
-            title: 'Проверка истории',
-            desc: 'Проверка по базам данных, история пробега, ДТП, сервисные записи.',
-            price: 'от 89 €'
-        }, {
-            icon: '🚗',
-            title: 'Выездная проверка',
-            desc: 'Выезд специалиста к автомобилю для осмотра и диагностики на месте.',
-            price: 'от 199 €'
-        }, {
-            icon: '⚖️',
-            title: 'Юридическая проверка',
-            desc: 'Проверка юридической чистоты, документов, отсутствия обременений.',
-            price: 'от 149 €'
-        }];
-
-        // Автомобили (замените фото на свои)
-        const CARS = [{
-            image: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=600&q=80',
-            make: 'BMW',
-            model: 'X5',
-            year: 2021,
-            mileage: '45 000 км',
-            engine: '3.0 л, 286 л.с.',
-            transmission: 'Автомат',
-            price: '62 900 €'
-        }, {
-            image: 'https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=600&q=80',
-            make: 'Mercedes-Benz',
-            model: 'GLE 400',
-            year: 2022,
-            mileage: '28 000 км',
-            engine: '3.0 л, 367 л.с.',
-            transmission: 'Автомат',
-            price: '74 500 €'
-        }, {
-            image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80',
-            make: 'Audi',
-            model: 'Q7',
-            year: 2020,
-            mileage: '62 000 км',
-            engine: '3.0 л, 249 л.с.',
-            transmission: 'Автомат',
-            price: '48 200 €'
-        }, {
-            image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80',
-            make: 'Porsche',
-            model: 'Cayenne',
-            year: 2021,
-            mileage: '34 000 км',
-            engine: '3.0 л, 340 л.с.',
-            transmission: 'Автомат',
-            price: '79 900 €'
-        }];
-
-        // Отзывы
-        const REVIEWS = [{
-            name: 'Алексей',
-            detail: 'Берлин, Германия',
-            stars: 5,
-            text: 'Отличный сервис! Подобрали мне BMW X5 за 3 дня. Провели полную диагностику, проверили историю. Всё честно и прозрачно. Рекомендую!'
-        }, {
-            name: 'Мария',
-            detail: 'Мюнхен, Германия',
-            stars: 5,
-            text: 'Огромное спасибо команде АВТОПОДБОР! Помогли с покупкой Mercedes GLE. Проверили автомобиль по всем параметрам, сэкономили мне время и нервы.'
-        }, {
-            name: 'Дмитрий',
-            detail: 'Франкфурт, Германия',
-            stars: 5,
-            text: 'Профессиональный подход к каждому клиенту. Подобрали Audi Q7 в идеальном состоянии. Все документы в порядке, юридическая проверка на высшем уровне.'
-        }];
-
-        // ============================================================
-        // 2. РЕНДЕРИНГ
-        // ============================================================
-
-        // Услуги
-        function renderServices() {
-            const grid = document.getElementById('servicesGrid');
-            grid.innerHTML = SERVICES.map((s, i) => `
-                    <div class="service-card fade-up delay-${i + 1}">
-                        <div class="service-icon">${s.icon}</div>
-                        <h3>${s.title}</h3>
-                        <p>${s.desc}</p>
-                        <span class="service-price">${s.price}</span>
-                    </div>
-                `).join('');
-        }
-
-        // Автомобили
-        function renderCars() {
-            const grid = document.getElementById('carsGrid');
-            grid.innerHTML = CARS.map((c, i) => `
-                    <div class="car-card fade-up delay-${i + 1}">
-                        <div class="car-image">
-                            <img src="${c.image}" alt="${c.make} ${c.model}" loading="lazy" />
-                            <span class="placeholder-badge">Фото для примера</span>
-                        </div>
-                        <div class="car-info">
-                            <div class="car-title">${c.make} ${c.model}</div>
-                            <div class="car-year">${c.year} · ${c.mileage}</div>
-                            <div class="car-specs">
-                                <div class="spec"><span class="label">Двигатель</span><span class="value">${c.engine}</span></div>
-                                <div class="spec"><span class="label">Коробка</span><span class="value">${c.transmission}</span></div>
-                            </div>
-                            <div class="car-price">${c.price} <small>EUR</small></div>
-                        </div>
-                    </div>
-                `).join('');
-        }
-
-        // Отзывы
-        function renderReviews() {
-            const grid = document.getElementById('reviewsGrid');
-            grid.innerHTML = REVIEWS.map((r, i) => `
-                    <div class="review-card fade-up delay-${i + 1}">
-                        <div class="review-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
-                        <blockquote>«${r.text}»</blockquote>
-                        <div class="review-author">
-                            <div class="review-avatar">${r.name.charAt(0)}</div>
-                            <div>
-                                <div class="name">${r.name}</div>
-                                <div class="detail">${r.detail}</div>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
-        }
-
-        // ============================================================
-        // 3. ФОРМА
-        // ============================================================
-
-        function initForm() {
-            const form = document.getElementById('contactForm');
-            const consent = document.getElementById('formConsent');
-            const nameInput = document.getElementById('formName');
-            const phoneInput = document.getElementById('formPhone');
-            const nameError = document.getElementById('nameError');
-            const phoneError = document.getElementById('phoneError');
-            const consentError = document.getElementById('consentError');
-            const success = document.getElementById('formSuccess');
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                let valid = true;
-
-                // Имя
-                if (!nameInput.value.trim()) {
-                    nameError.classList.add('visible');
-                    valid = false;
-                } else {
-                    nameError.classList.remove('visible');
-                }
-
-                // Телефон
-                if (!phoneInput.value.trim()) {
-                    phoneError.classList.add('visible');
-                    valid = false;
-                } else {
-                    phoneError.classList.remove('visible');
-                }
-
-                // Согласие
-                if (!consent.checked) {
-                    consentError.classList.add('visible');
-                    valid = false;
-                } else {
-                    consentError.classList.remove('visible');
-                }
-
-                if (!valid) return;
-
-                // Успех (демо-режим)
-                success.classList.add('visible');
-                form.querySelector('button[type="submit"]').disabled = true;
-                form.querySelector('button[type="submit"]').textContent = '✓ Отправлено';
-
-                // Сброс через 5 секунд (для демо)
-                setTimeout(() => {
-                    success.classList.remove('visible');
-                    form.querySelector('button[type="submit"]').disabled = false;
-                    form.querySelector('button[type="submit"]').textContent = 'Отправить заявку';
-                    form.reset();
-                }, 5000);
-
-                // Здесь можно добавить реальную отправку на сервер/Telegram/CRM
-                console.log('Форма отправлена (демо):', {
-                    name: nameInput.value,
-                    phone: phoneInput.value,
-                    car: document.getElementById('formCar').value,
-                    budget: document.getElementById('formBudget').value,
-                    message: document.getElementById('formMessage').value,
-                    consent: consent.checked
-                });
-            });
-
-            // Убираем ошибки при вводе
-            nameInput.addEventListener('input', () => nameError.classList.remove('visible'));
-            phoneInput.addEventListener('input', () => phoneError.classList.remove('visible'));
-            consent.addEventListener('change', () => consentError.classList.remove('visible'));
-        }
-
-        // ============================================================
-        // 4. COOKIE BANNER
-        // ============================================================
-
-        function initCookieBanner() {
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAccept');
-            const declineBtn = document.getElementById('cookieDecline');
-
-            // Проверяем, давал ли пользователь согласие
-            const consent = localStorage.getItem('cookieConsent');
-            if (consent === null) {
-                banner.classList.add('visible');
-            }
-
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                banner.classList.remove('visible');
-                // Здесь можно включить аналитику, если она будет добавлена позже
-                console.log('Cookies приняты');
-            });
-
-            declineBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'declined');
-                banner.classList.remove('visible');
-                console.log('Cookies отклонены');
-            });
-        }
-
-        // ============================================================
-        // 5. MOBILE MENU
-        // ============================================================
-
-        function initMobileMenu() {
-            const toggle = document.getElementById('menuToggle');
-            const nav = document.getElementById('nav');
-
-            toggle.addEventListener('click', function() {
-                const isOpen = nav.classList.toggle('open');
-                toggle.classList.toggle('active');
-                toggle.setAttribute('aria-expanded', isOpen);
-                document.body.style.overflow = isOpen ? 'hidden' : '';
-            });
-
-            // Закрываем меню при клике на ссылку
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    nav.classList.remove('open');
-                    toggle.classList.remove('active');
-                    toggle.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-
-        // ============================================================
-        // 6. SCROLL ANIMATIONS (Intersection Observer)
-        // ============================================================
-
-        function initScrollAnimations() {
-            const elements = document.querySelectorAll('.fade-up');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.12,
-                rootMargin: '0px 0px -30px 0px'
-            });
-
-            elements.forEach(el => observer.observe(el));
-        }
-
-        // ============================================================
-        // 7. HEADER SHADOW ON SCROLL
-        // ============================================================
-
-        function initHeaderScroll() {
-            const header = document.getElementById('header');
-            let lastScroll = 0;
-
-            window.addEventListener('scroll', function() {
-                const currentScroll = window.pageYOffset;
-                if (currentScroll > 30) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-                lastScroll = currentScroll;
-            });
-        }
-
-        // ============================================================
-        // 8. ЗАПУСК
-        // ============================================================
-
-        document.addEventListener('DOMContentLoaded', function() {
-            renderServices();
-            renderCars();
-            renderReviews();
-            initForm();
-            initCookieBanner();
-            initMobileMenu();
-            initScrollAnimations();
-            initHeaderScroll();
-        });
-    </script>
-
-</body>
-</html>
+                <a href="#form" class="btn-primary">Оставить заявку
